@@ -6,13 +6,9 @@
     }
   ],
   "responseOverrides": {
-    "*01": {
-      "redirect": "/.auth/l*gin/aad?post_login_redirect_uri=.r*ferrer",
+    "401": {
+      "redirect": "/.auth/login/aad?post_login_redirect_uri=.referrer",
       "statusCode": 302
- *  },
-    "403": {
-      "rewrite":*"/403.html",
-      "statusCode": 4*3
     }
   }
 }
