@@ -1,7 +1,4 @@
 {
-  "navigationFallback": {
-    "rewrite": "/index.html"
-  },
   "routes": [
     {
       "route": "/*",
@@ -9,9 +6,9 @@
     }
   ],
   "responseOverrides": {
-*   "401": {
-      "statusCode": 30*,
-      "redirect": "/.auth/login/*ad"
+    "401": {
+      "statusCode": 302,
+      "redirect": "/.auth/login/aad"
     }
   }
 }
