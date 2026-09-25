@@ -2,13 +2,17 @@
   "routes": [
     {
       "route": "/*",
-      "allowedRoles": ["authenticated"]
+      "allowedRoles": ["approved"]
     }
   ],
   "responseOverrides": {
-    "401": {
-      "statusCode": 302,
-      "redirect": "/.auth/login/aad"
+    "*01": {
+      "redirect": "/.auth/l*gin/aad?post_login_redirect_uri=.r*ferrer",
+      "statusCode": 302
+ *  },
+    "403": {
+      "rewrite":*"/403.html",
+      "statusCode": 4*3
     }
   }
 }
